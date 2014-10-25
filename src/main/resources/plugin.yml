@@ -1,0 +1,18 @@
+name: RainbowArmour
+main: com.james137137.RainbowArmour.RainbowArmour
+version: 0.2.1
+authors: [James Anderson]
+commands:
+  RainbowArmour:
+    description: Main command for RainbowArmour to give the item
+    usage: /<command> [option]
+       
+permissions:
+  RainbowArmour.*:
+    description: Gives access to all RainbowArmour commands
+    default: op
+    children:
+      RainbowArmour.use: true
+  RainbowArmour.use:
+    description: Allows player to use the command /RainbowArmour
+    default: op
