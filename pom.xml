@@ -28,36 +28,6 @@
     </repositories>
     <build>
         <finalName>RainbowArmour</finalName>
-        
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.properties</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>false</filtering>
-                <excludes>
-                    <exclude>**/*.properties</exclude>
-                </excludes>
-            </resource>
-        </resources>
-        
-        
-        <plugins>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <archive>
-                        <compress>true</compress>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 
     
