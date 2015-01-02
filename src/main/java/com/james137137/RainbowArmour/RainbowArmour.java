@@ -17,7 +17,6 @@ import org.bukkit.Color;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.james137137.org.mcstats.Metrics;
 
 import java.io.IOException;
 import net.gravitydevelopment.updater.Updater;
@@ -46,22 +45,11 @@ public class RainbowArmour extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        runMetrics();
         playerChanger = new myArmourColourChanger(this, 0, 2);
         log = Bukkit.getLogger();
         getServer().getPluginManager().registerEvents(new MyListener(this), this);
         String version = Bukkit.getServer().getPluginManager().getPlugin(this.getName()).getDescription().getVersion();
         log.log(Level.INFO, this.getName() + " : Version {0} enabled", version);
-    }
-
-    private void runMetrics() {
-        try {
-            Metrics metrics = new Metrics(this);
-            metrics.start();
-        } catch (IOException e) {
-            // Failed to submit the stats :-(
-            log.info("[" + this.getName() + "] Metrics: Failed to submit the stats");
-        }
     }
 
     @Override
