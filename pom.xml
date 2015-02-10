@@ -18,6 +18,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>shadowvolt-repo</id>
+            <url>http://ci.shadowvolt.com/plugin/repository/everything/</url>
+        </repository>
     </repositories>
     <build>
         <finalName>RainbowArmour</finalName>
@@ -25,8 +29,13 @@
     <dependencies>
         <dependency>
             <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.8.1-R0.1-SNAPSHOT</version>
+            <artifactId>bukkit</artifactId>
+            <version>1.8-R0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.comphenix.protocol</groupId>
+            <artifactId>ProtocolLib</artifactId>
+            <version>3.6.3-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
